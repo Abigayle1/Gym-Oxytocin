@@ -1,3 +1,5 @@
+"use client";
+
 import { pricing } from "@/lib/gym-data";
 import { PricingCard } from "./pricing-card";
 
