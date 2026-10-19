@@ -6,27 +6,14 @@ import './globals.css'
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
+//Browser Name & Logo
 export const metadata: Metadata = {
-  title: 'GymOxytocin | Health. Strength. Confidence.',
+  title: 'Gym Oxytocin',
   description: 'Transform your life at GymOxytocin. Personal training, fitness assessments, therapeutic massages, and more at 54 Waltham Park Road.',
-  generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
+    icon: "/Media/Gym-Oxytocin-logo.jpg",
+    apple: "/Media/Gym-Oxytocin-logo.jpg",
+  }
 }
 
 export default function RootLayout({

@@ -14,10 +14,10 @@ export function HeroSection() {
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover" //md:object-contain to be added at the end to adjust the protrait
           poster="/hero-poster.jpg"
         >
-          <source src="https://videos.pexels.com/video-files/4761437/4761437-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+          <source src="/Videos/GymAds2.mp4" type="video/mp4" />
         </video>
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/60" />

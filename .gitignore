@@ -15,3 +15,5 @@ node_modules
 .next/
 .DS_Store
 .vercel
+
+/public/Videos/PersonalTraining.MP4

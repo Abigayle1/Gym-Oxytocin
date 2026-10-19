@@ -15,31 +15,49 @@ export function VideoGallery() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Training <span className="text-primary">Gallery</span>
           </h2>
+
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Get a glimpse of our training sessions, classes, and facilities
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {videos.map((video) => (
-            <div
-              key={video.id}
-              className="group relative aspect-video bg-muted rounded-2xl overflow-hidden cursor-pointer border border-border hover:border-primary/50 transition-all duration-300"
-              onClick={() => setActiveVideo(video.videoUrl)}
-            >
-              {/* Thumbnail placeholder */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20" />
-              <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                  <Play className="w-8 h-8 text-primary-foreground ml-1" />
-                </div>
-                <p className="text-foreground font-medium text-center px-4">
-                  {video.title}
-                </p>
-              </div>
+        {videos.length === 0 ? (
+          <p className="text-center text-muted-foreground">
+            Training videos will be added soon.
+          </p>
+        ) : (
+          <>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {videos.map((video) => (
+                <button
+                  key={video.id}
+                  type="button"
+                  className="group relative aspect-video bg-muted rounded-2xl overflow-hidden cursor-pointer border border-border hover:border-primary/50 transition-all duration-300"
+                  onClick={() => setActiveVideo(video.videoUrl)}
+                  aria-label={`Play ${video.title}`}
+                >
+                  <img
+                    src={video.thumbnail}
+                    alt={video.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+
+                  <div className="absolute inset-0 bg-black/40" />
+
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-16 h-16 rounded-full bg-primary/40 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Play className="w-8 h-8 text-primary-foreground ml-1" />
+                    </div>
+                  </div>
+                </button>
+              ))}
             </div>
-          ))}
-        </div>
+
+            <p className="text-center text-muted-foreground text-sm md:text-base mt-8">
+              Click any video to view highlights from Gym Oxytocin.
+            </p>
+          </>
+        )}
       </div>
 
       {/* Video Modal */}
@@ -55,16 +73,19 @@ export function VideoGallery() {
             <Button
               size="icon"
               variant="ghost"
-              className="absolute -top-12 right-0 text-foreground hover:text-primary"
+              className="absolute -top-12 right-0 text-white hover:text-primary"
               onClick={() => setActiveVideo(null)}
+              aria-label="Close video"
             >
               <X className="w-8 h-8" />
             </Button>
-            <iframe
+
+            <video
               src={activeVideo}
               className="w-full h-full rounded-xl"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
+              controls
+              autoPlay
+              playsInline
             />
           </div>
         </div>

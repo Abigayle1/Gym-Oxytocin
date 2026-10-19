@@ -13,7 +13,7 @@ export function Footer() {
             </h3>
             <p className="text-primary font-medium mb-4">{gymInfo.tagline}</p>
             <p className="text-muted-foreground text-sm">
-              Transforming lives through fitness since 2010. Join our community
+              Transforming lives through fitness since 2023. Join our community
               and discover your potential.
             </p>
           </div>

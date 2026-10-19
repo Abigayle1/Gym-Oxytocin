@@ -40,11 +40,11 @@ export const services = [
 export const pricing = [
   {
     id: 1,
-    name: "Monthly Membership",
+    name: "Monthly Gym Membership",
     price: "J$11,000",
     period: "/month",
-    description: "Full gym access with all equipment and group classes",
-    features: ["Unlimited gym access", "Group classes included", "Locker access", "Free parking"],
+    description: "Full gym access to all equipments and group classes",
+    features: ["Unlimited gym access", "Group classes included", "Free parking"],
     popular: true,
   },
   {
@@ -53,7 +53,7 @@ export const pricing = [
     price: "J$30,000",
     period: "/month",
     description: "Starting price for personalized training sessions",
-    features: ["4 sessions per month", "Custom workout plans", "Nutrition guidance", "Progress tracking"],
+    features: ["3 sessions per week throughout the month", "Custom workout plans", "Nutrition guidance", "Progress tracking"],
     popular: false,
   },
   {
@@ -62,7 +62,7 @@ export const pricing = [
     price: "J$8,500",
     period: "/session",
     description: "Professional therapeutic massage services",
-    features: ["60-minute session", "Certified therapists", "Multiple techniques", "Flexible scheduling"],
+    features: ["60-minute session", "Certified Massage therapists", "Flexible scheduling"],
     popular: false,
   },
   {
@@ -70,7 +70,7 @@ export const pricing = [
     name: "Health Counseling",
     price: "J$3,000",
     period: "/session",
-    description: "Expert health and wellness consultation",
+    description: "Starting price for expert health and wellness consultation",
     features: ["1-hour consultation", "Personalized advice", "Goal setting", "Follow-up support"],
     popular: false,
   },
@@ -80,7 +80,7 @@ export const pricing = [
     price: "J$1,000",
     period: "/day",
     description: "Perfect for visitors or trying us out",
-    features: ["Full day access", "All equipment", "Group classes", "No commitment"],
+    features: ["Full day access", "All equipment", "Group classes (Only on Tuesdays)", "No commitment"],
     popular: false,
   },
   {
@@ -89,64 +89,67 @@ export const pricing = [
     price: "J$3,000",
     period: "/week",
     description: "Great value for short-term training",
-    features: ["7-day access", "All amenities", "Group classes", "Flexible schedule"],
+    features: ["7-day access", "All amenities", "Group classes"],
     popular: false,
   },
 ];
 
+//Need to make it that the owner of the website can upload this information instead of having it hardcoded.
 export const memberHighlight = {
-  name: "Marcus Johnson",
-  achievement: "Lost 25kg in 6 months",
-  testimonial: "GymOxytocin transformed my life. The trainers are incredibly supportive, and the community keeps me motivated every single day. I've never felt stronger or more confident!",
+  name: "Travane Morrison",
+  achievement: "Bench 450lbs",
+  testimonial: "GymOxytocin transformed my life. The trainer is incredibly supportive, and the community keeps me motivated every single day. I've never felt stronger or more confident!",
   image: "/member-highlight.jpg",
   memberSince: "January 2025",
 };
+
 
 export const videos = [
   {
     id: 1,
     title: "High-Intensity Training",
-    thumbnail: "/video-thumb-1.jpg",
+    thumbnail: "/Media/Thumbnail1.png",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
     id: 2,
     title: "Group Fitness Class",
-    thumbnail: "/video-thumb-2.jpg",
+    thumbnail: "/Media/Thumbnail2.png",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
     id: 3,
     title: "Personal Training Session",
-    thumbnail: "/video-thumb-3.jpg",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    thumbnail: "/Media/Thumbnail3.png",
+    videoUrl: "https://www.youtube.com/embed/kTkOXGqUJkA",
   },
   {
     id: 4,
     title: "Recovery & Stretching",
-    thumbnail: "/video-thumb-4.jpg",
+    thumbnail: "/Media/Thumbnail4.png",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
     id: 5,
     title: "Strength Training Basics",
-    thumbnail: "/video-thumb-5.jpg",
+    thumbnail: "/Media/Thumbnail5.png",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
     id: 6,
     title: "Cardio Workout",
-    thumbnail: "/video-thumb-6.jpg",
+    thumbnail: "/Media/Thumbnail6.png",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
 ];
 
 export const gymInfo = {
-  name: "GymOxytocin",
+  name: "Gym Oxytocin",
   tagline: "Health. Strength. Confidence.",
   address: "54 Waltham Park Road",
   hours: {
-    daily: "6:00 AM – 9:00 PM",
+    daily: "6:00 AM – 10:00 PM",
+    Weekend: "7:00 AM – 7:00 PM",
     groupClasses: "Tuesday 5:30 PM & 6:30 PM",
   },
   socials: {

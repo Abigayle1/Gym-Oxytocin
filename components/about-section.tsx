@@ -12,9 +12,8 @@ export function AboutSection() {
               Welcome to <span className="text-primary">{gymInfo.name}</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              At GymOxytocin, we believe in transforming lives through fitness. Our state-of-the-art 
-              facility is designed to help you build health, strength, and confidence. Whether you&apos;re 
-              just starting your fitness journey or you&apos;re a seasoned athlete, our expert trainers 
+              At Gym Oxytocin, we believe in transforming lives through fitness. Our personalized programs and training facility is designed to help you build health, strength, and confidence. Whether you&apos;re 
+              just starting your fitness journey or you&apos;re a seasoned athlete, our services
               and supportive community are here to help you achieve your goals.
             </p>
             
@@ -36,7 +35,8 @@ export function AboutSection() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground">Opening Hours</h3>
-                  <p className="text-muted-foreground">Daily: {gymInfo.hours.daily}</p>
+                  <p className="text-muted-foreground"> Daily: {gymInfo.hours.daily}</p>
+                  <p className="text-muted-foreground"> Saturday: {gymInfo.hours.Weekend} </p>
                 </div>
               </div>
               
@@ -55,18 +55,13 @@ export function AboutSection() {
           {/* Image/Visual */}
           <div className="relative">
             <div className="aspect-square rounded-2xl bg-muted overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-secondary/30" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-6xl md:text-8xl font-bold text-primary mb-2">15+</div>
-                  <p className="text-xl text-foreground font-medium">Years of Excellence</p>
-                </div>
-              </div>
+              <img
+                src="/Media/GymOwnerPic.png" 
+                alt="Owner of GymOxytocin"
+                className="w-full h-full object-cover"
+              />
             </div>
-            {/* Decorative elements */}
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary rounded-full opacity-20" />
-            <div className="absolute -top-4 -left-4 w-16 h-16 bg-secondary rounded-full opacity-20" />
-          </div>
+          </div>          
         </div>
       </div>
     </section>
